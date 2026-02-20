@@ -220,3 +220,4 @@ resource "kubernetes_namespace_v1" "fintech_dev" {
 
   depends_on = [module.eks]
 }
+

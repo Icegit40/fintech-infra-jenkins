@@ -116,6 +116,7 @@ resource "aws_instance" "eks_client_node" {
 }
 
 resource "aws_eip" "eks_client_eip" {
+  count = 0
   instance = aws_instance.eks_client_node.id
   domain = "vpc"
 
