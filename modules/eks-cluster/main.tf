@@ -186,6 +186,7 @@ resource "kubernetes_namespace" "fintech" {
       name = "fintech"
     }
     labels = {
+      app.kubernetes.io/name = "fintech"
       app = "fintech"
     }
   }
@@ -200,6 +201,7 @@ resource "kubernetes_namespace" "monitoring" {
       name = "monitoring"
     }
     labels = {
+      app.kubernetes.io/name = "monitoring"
       app = "monitoring"
     }
   }
