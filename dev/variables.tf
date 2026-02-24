@@ -5,7 +5,7 @@
 variable "aws_account_id" {
   description = "AWS Account ID"
   type        = string
-  default     = "327019199684"
+  default     = "977099032919"
 }
 
 variable "aws_region" {
@@ -46,7 +46,7 @@ variable "tags" {
 variable "cluster_name" {
   description = "Name of the EKS cluster"
   type        = string
-  default     = "dev-dominion-cluster"
+  default     = "dev-ice-cluster"
 }
 
 variable "rolearn" {
@@ -85,7 +85,7 @@ variable "key_name" {
 variable "domain_name" {
   description = "Primary domain name for certificate issuance"
   type        = string
-  default     = "*.pgabootcam.org"
+  default     = "pgabootcam.org"
 }
 
 variable "san_domains" {
