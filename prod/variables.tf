@@ -46,13 +46,13 @@ variable "tags" {
 variable "cluster_name" {
   description = "Name of the EKS cluster"
   type        = string
-  default     = "prod-dominion-cluster"
+  default     = "prod-ice-cluster"
 }
 
 variable "rolearn" {
   description = "IAM role ARN to be added to the aws-auth configmap as admin"
   type        = string
-  default     = "arn:aws:iam::977099032919:user/Projectgroup@A"
+  default     = "arn:aws:iam::977099032919:role/terraform-create-role"
 }
 
 
@@ -85,7 +85,7 @@ variable "key_name" {
 variable "domain_name" {
   description = "Primary domain name for certificate issuance"
   type        = string
-  default     = "*.pgabootcam.org"
+  default     = "pgabootcam.org"
 }
 
 variable "san_domains" {
