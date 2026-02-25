@@ -65,22 +65,22 @@ pipeline {
           set -e
           
           # IAM Roles
-          aws iam delete-role --role-name eks-client-ssm-role  true
-          aws iam delete-role --role-name prod-GitHubActionsECR  true
+          aws iam delete-role --role-name eks-client-ssm-role || true
+          aws iam delete-role --role-name prod-GitHubActionsECR || true
 
           # IAM Policies
-          aws iam delete-policy --policy-arn arn:aws:iam::${AWS_ACCOUNT_ID}:policy/EKSClientEKSAccessPolicy  true
-          aws iam delete-policy --policy-arn arn:aws:iam::${AWS_ACCOUNT_ID}:policy/prod-GitHubECRPolicy  true
-          aws iam delete-policy --policy-arn arn:aws:iam::${AWS_ACCOUNT_ID}:policy/prod-GitHubEKSPolicy  true
+          aws iam delete-policy --policy-arn arn:aws:iam::${AWS_ACCOUNT_ID}:policy/EKSClientEKSAccessPolicy || true
+          aws iam delete-policy --policy-arn arn:aws:iam::${AWS_ACCOUNT_ID}:policy/prod-GitHubECRPolicy || true
+          aws iam delete-policy --policy-arn arn:aws:iam::${AWS_ACCOUNT_ID}:policy/prod-GitHubEKSPolicy || true
 
           # IAM Instance Profiles
-          aws iam delete-instance-profile --instance-profile-name eks-client-ssm-profile  true
+          aws iam delete-instance-profile --instance-profile-name eks-client-ssm-profile || true
 
           # OIDC Provider
-          aws iam delete-open-id-connect-provider --open-id-connect-provider-arn arn:aws:iam::${AWS_ACCOUNT_ID}:oidc-provider/token.actions.githubusercontent.com  true
+          aws iam delete-open-id-connect-provider --open-id-connect-provider-arn arn:aws:iam::${AWS_ACCOUNT_ID}:oidc-provider/token.actions.githubusercontent.com || true
 
           # KMS Alias
-          aws kms delete-alias --alias-name alias/eks/prod-auggie-cluster  true
+          aws kms delete-alias --alias-name alias/eks/prod-auggie-cluster || true
 
           # CloudWatch Log Group
           aws logs delete-log-group --log-group-name /aws/eks/prod-auggie-cluster/cluster || true
@@ -105,7 +105,7 @@ pipeline {
         '''
       }
     }
-    
+
     stage('Init & Validate') {
       steps {
         sh '''
