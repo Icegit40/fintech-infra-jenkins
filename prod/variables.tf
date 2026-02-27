@@ -97,7 +97,7 @@ variable "san_domains" {
 variable "route53_zone_id" {
   description = "Route 53 hosted zone ID for domain validation"
   type        = string
-  default     = "Z059392226DU041HMKWUO"
+  default     = "Z0230099OB6IFW5703WT"
 }
 
 ################################################################################
