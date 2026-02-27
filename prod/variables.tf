@@ -85,13 +85,13 @@ variable "key_name" {
 variable "domain_name" {
   description = "Primary domain name for certificate issuance"
   type        = string
-  default     = "pgabootcam.org"
+  default     = "pgabootcamps.com"
 }
 
 variable "san_domains" {
   description = "SANs (Subject Alternative Names) for SSL certificate"
   type        = list(string)
-  default     = ["*.pgabootcam.org"]
+  default     = ["*.pgabootcamps.com"]
 }
 
 variable "route53_zone_id" {

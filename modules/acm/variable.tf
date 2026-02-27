@@ -2,13 +2,13 @@
 variable "domain_name" {
   description = "Primary domain name for the certificate"
   type        = string
-  default     = "pgabootcam.org"
+  default     = "pgabootcamps.com"
 }
 
 variable "san_domains" {
   description = "Subject alternative names for the certificate"
   type        = list(string)
-  default     = ["*.pgabootcam.org"]
+  default     = ["*.pgabootcamps.com"]
 }
 
 variable "route53_zone_id" {
