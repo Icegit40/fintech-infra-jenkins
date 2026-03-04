@@ -20,7 +20,7 @@ variable "cluster_name" {
 
 variable "rolearn" {
   description = "Add admin role to the aws-auth configmap"
-  default     = "arn:aws:iam::977099032919:user/Projectgroup@A"
+  default     = "arn:aws:iam::183295416415:user/myvsCode"
 }
 
 # ################################################################################
@@ -79,7 +79,7 @@ variable "san_domains" {
 variable "route53_zone_id" {
   description = "Route 53 Hosted Zone ID"
   type        = string
-  default     = "Z0230099OB6IFW5703WT" # Replace with actual Route 53 Zone ID
+  default     = "Z07328843VDO7H8IU7W4V" # Replace with actual Route 53 Zone ID
 }
 
 
@@ -87,7 +87,7 @@ variable "route53_zone_id" {
 
 variable "aws_account_id" {
   description = "AWS Account ID"
-  default     = "977099032919"
+  default     = "183295416415"
 }
 
 variable "repositories" {

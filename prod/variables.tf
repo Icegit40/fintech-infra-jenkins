@@ -5,7 +5,7 @@
 variable "aws_account_id" {
   description = "AWS Account ID"
   type        = string
-  default     = "977099032919"
+  default     = "183295416415"
 }
 
 variable "aws_region" {
@@ -52,7 +52,7 @@ variable "cluster_name" {
 variable "rolearn" {
   description = "IAM role ARN to be added to the aws-auth configmap as admin"
   type        = string
-  default     = "arn:aws:iam::977099032919:role/terraform-create-role"
+  default     = "arn:aws:iam::183295416415:role/terraform-create-role"
 }
 
 
@@ -85,19 +85,19 @@ variable "key_name" {
 variable "domain_name" {
   description = "Primary domain name for certificate issuance"
   type        = string
-  default     = "pgabootcamps.com"
+  default     = "iceakpex.com"
 }
 
 variable "san_domains" {
   description = "SANs (Subject Alternative Names) for SSL certificate"
   type        = list(string)
-  default     = ["*.pgabootcamps.com"]
+  default     = ["*.iceakpex.com"]
 }
 
 variable "route53_zone_id" {
   description = "Route 53 hosted zone ID for domain validation"
   type        = string
-  default     = "Z0230099OB6IFW5703WT"
+  default     = "Z07328843VDO7H8IU7W4V"
 }
 
 ################################################################################
